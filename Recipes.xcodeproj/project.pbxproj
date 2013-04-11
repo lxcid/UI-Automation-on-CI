@@ -379,7 +379,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "sudo instruments -t /Applications/Xcode.app/Contents/Applications/Instruments.app/Contents/PlugIns/AutomationInstrument.bundle/Contents/Resources/Automation.tracetemplate \"$BUILT_PRODUCTS_DIR/$PRODUCT_NAME.$WRAPPER_EXTENSION\" -e UIASCRIPT \"$PROJECT_DIR/UIAutomations/uia_tap_on_unit_conversion.js\" -e UIARESULTSPATH \"$PROJECT_DIR/logs/\"";
+			shellScript = "sudo -S su $USER -l -c \"instruments -t /Applications/Xcode.app/Contents/Applications/Instruments.app/Contents/PlugIns/AutomationInstrument.bundle/Contents/Resources/Automation.tracetemplate \\\"$BUILT_PRODUCTS_DIR/$PRODUCT_NAME.$WRAPPER_EXTENSION\\\" -e UIASCRIPT \\\"$PROJECT_DIR/UIAutomations/uia_tap_on_unit_conversion.js\\\" -e UIARESULTSPATH \\\"$PROJECT_DIR/logs/\\\"\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
